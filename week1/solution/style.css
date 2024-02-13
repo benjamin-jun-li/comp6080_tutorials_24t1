@@ -95,6 +95,11 @@ p {
     background-color: rgb(230, 230, 230);
 }
 
+.email-list {
+    display: flex;
+    flex-direction: column;
+}
+
 .email-title {
     width: 100%;
     display: flex;
@@ -125,4 +130,8 @@ p {
 
 .unread-btn {
     background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width:768px) {
+
 }
