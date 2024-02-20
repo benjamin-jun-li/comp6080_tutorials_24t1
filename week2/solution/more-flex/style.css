@@ -1,0 +1,70 @@
+:root {
+    --border-solid: 1px solid black
+}
+
+* {
+    box-sizing: border-box;
+    border: var(--border-solid);
+    padding: 5px;
+}
+
+body {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.container {
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-col {
+    width: 20%;
+    height: 100%;
+}
+
+.main-col {
+    width: 80%;
+    height: 100%;
+}
+
+.up-row {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.down-row {
+    height: 50%;
+    width: 100%;
+}
+
+.main-left-col {
+    width: calc(100% - 100%/3);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right-col {
+    width: calc(100%/3);
+}
+
+.main-left-up-row {
+    height: 50%;
+}
+
+.main-left-down-row {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-cell {
+    flex:1
+}
+
+.right-cell {
+    flex:1
+}
