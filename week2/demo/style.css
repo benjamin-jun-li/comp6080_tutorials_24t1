@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 10rem;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.elem {
+    background-color: rgb(29, 189, 189);
+    margin: 2px;
+    height: 6rem;
+}
+
+#col-2 {
+    grid-column: 1/3;
+}
