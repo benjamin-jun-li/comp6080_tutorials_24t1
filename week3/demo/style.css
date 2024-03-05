@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#con-1 {
+  height: 3rem;
+  width: 3rem;
+  background-color: aqua;
+}
+
+#con-2 {
+  height: 3rem;
+  width: 3rem;
+  background-color: red;
+}
