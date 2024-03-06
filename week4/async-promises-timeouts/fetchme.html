@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head></head>
-	<body>
-		<div id="dogname"></div>
-		<script type="text/javascript">
-		const data = fetch('http://www.cse.unsw.edu.au/~cs6080/raw/data/doggo.txt');
-		document.getElementById('dogname').innerText = data;
-		</script>
-	</body>
+  <head></head>
+  <body>
+    <div id="dogname"></div>
+    <script type="text/javascript">
+      fetch("http://www.cse.unsw.edu.au/~cs6080/raw/data/doggo.txt")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("dogname").textContent = data;
+        });
+      const promise1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(1);
+        }, 500);
+      });
+
+      const promise2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(2);
+        }, 400);
+      });
+
+      const promise3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(3);
+        }, 300);
+      });
+    </script>
+  </body>
 </html>

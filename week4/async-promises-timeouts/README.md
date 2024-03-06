@@ -36,7 +36,7 @@ Promise.all([promise1, promise2,promise3]).then((res) => {
     console.log(res[2]);
 });
 ```
-
+1,2,3
 2. What would be the output of this code?
 
 ```
@@ -44,5 +44,5 @@ promise1.then((res) => { console.log(res); }, (err) => { alert(err);});
 promise2.then((res) => { console.log(res); }, (err) => { alert(err);});
 promise3.then((res) => { console.log(res); }, (err) => { alert(err);});
 ```
-
+3,2,1
 3. Why are the results different even though the promises are the same?

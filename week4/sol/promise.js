@@ -1,3 +1,5 @@
+// what is a promise
+
 const p = new Promise((resolve, reject) => {
   let a = Math.max(...[1, 2, 3, 4]);
   if (a === 2) {
