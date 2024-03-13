@@ -1,3 +1,4 @@
+import apiCall from "./api";
 document.title = "Qanda";
 
 const loginForm = document.querySelector(".login-form");
@@ -47,3 +48,4 @@ registerForm.addEventListener("submit", (e) => {
 })
 
 addLinkRedirect();
+apiCall("/user", "GET");
