@@ -6,17 +6,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
-  <body class="min-h-screen w-full box-border bg-gradient-to-b from-sky-800 to-slate-900">
-    <header class="h-[5vh] flex items-center justify-between">
-      <h1 class="text-3xl font-semibold m-2">Qanda</h1>
-      <nav class="m-2">
-        <ul class="flex flex-row gap-x-2">
-          <li><a href="#">Threads</a></li>
-          <li><a href="#">Profile</a></li>
+  <body
+    class="min-h-screen w-full box-border bg-gradient-to-b from-sky-800 to-slate-900"
+  >
+    <header class="p-2 min-h-[5vh] flex flex-row justify-between items-center">
+      <h1 class="text-3xl font-semibold">Qanda</h1>
+      <nav class="hidden">
+        <ul class="flex flex-row gap-x-3 text-slate-100">
+          <li>Profile</li>
+          <li>Threads</li>
         </ul>
       </nav>
     </header>
     <main class="min-h-[95vh] flex justify-center items-center">
+        <div class="w-full h-full" id="main-page">
+
+        </div>
       <form class="login-form w-[30%] mx-auto">
         <div class="mb-5">
           <label
@@ -142,6 +147,6 @@
       </form>
     </main>
     <footer></footer>
-    <script type="module" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

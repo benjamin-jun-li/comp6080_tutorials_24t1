@@ -7,29 +7,18 @@
  *
  */
 document.title = "async";
-
+ 
 const makeRequest = (num) => {
   return new Promise((resolve, reject) => {
     resolve(num);
   });
 };
 
-makeRequest(100)
-  .then((res) => {
-    console.log(res);
-    return res.toString();
-  })
-  .then((data) => {
-    console.log(data, typeof data);
-  });
-
 const getResult = async () => {
-  const res = await makeRequest(98);
+  const res = await makeRequest(89);
   console.log(res);
-  return res;
-};
+}
 
-// more examples
 const walkDog = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -54,15 +43,12 @@ const cleanYard = () => {
   });
 };
 
-// user/info
-// user/threads
+const doStuff = async () => {
+  const walkDogRes = await walkDog();
+  const doLaundryRes = await doLaundry();
+  const cleanYardRes = await cleanYard();
+  const resList = await Promise.all([walkDog(), doLaundry(), cleanYard()]);
+  console.log(resList);
+}
 
-
-const doSomething = async () => {
-    const [walkDogRes, doLaundryRes, cleanYardRes] = Promise.all([walkDog(), doLaundry(), cleanYard()]).then(resList => {
-        
-    });
-    console.log(walkDogRes, doLaundryRes, cleanYardRes);
-};
-
-doSomething();
+doStuff();

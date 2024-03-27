@@ -1,10 +1,9 @@
-document.title = "qanda";
+document.title = "Qanda";
 
 const loginForm = document.querySelector(".login-form");
 const registerForm = document.querySelector(".register-form");
 
-const switchFormDisplay = (option) => {
-    // option : register | login
+const switchAuthFormDisplay = (option) => {
     if (option === "register") {
         loginForm.classList.add("hidden");
         registerForm.classList.remove("hidden");
@@ -14,17 +13,18 @@ const switchFormDisplay = (option) => {
     }
 }
 
-const addAuthRedirect = () => {
+const addAuthFormRedirect = () => {
     const toSignupLink = document.querySelector(".register-link");
     const toSigninLink = document.querySelector(".login-link");
- 
-    toSignupLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        switchFormDisplay("register");
-    });
+
     toSigninLink.addEventListener("click", (e) => {
         e.preventDefault();
-        switchFormDisplay("login");
+        switchAuthFormDisplay("login")
+    })
+
+    toSignupLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        switchAuthFormDisplay("register")
     })
 }
 
@@ -33,18 +33,21 @@ loginForm.addEventListener("submit", (e) => {
     const elements = loginForm.elements;
     const email = elements['email-l'].value;
     const password = elements['password-l'].value;
-    const obj = {
+
+    console.log({
         email, password
-    }
-    console.log(obj);
-});
+    })
+})
 
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log({
-        email: elements['email'].value,
-        password: elements['password'].value
-    })
-});
+    const elements = registerForm.elements;
+    const email = elements['email-r'].value;
+    const password = elements['password-r'].value;
 
-addAuthRedirect();
+    console.log({
+        email, password
+    })
+})
+
+addAuthFormRedirect();
