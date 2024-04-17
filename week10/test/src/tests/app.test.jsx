@@ -6,6 +6,8 @@ describe("App", () => {
   it("renders the App component", () => {
     render(<App />);
     expect(screen.getByText("count is 0")).toBeInTheDocument();
+    expect(screen.getByRole("button")).toBeInTheDocument();
+    expect(screen.getByText("Vite + React")).toBeInTheDocument();
   }),
   it("increments the count when the button is clicked", async () => {
     render(<App />);
@@ -14,3 +16,4 @@ describe("App", () => {
     expect(screen.getByText("count is 1")).toBeInTheDocument();
   });
 });
+
